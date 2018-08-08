@@ -34,3 +34,22 @@ hr {
 	align: center;
 	width: 25%;
 }
+
+h3 {
+	font-size: 100%;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+h6 {
+	font-size: 50%;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+
+.boxes {
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 30px solid #000000;
+}
