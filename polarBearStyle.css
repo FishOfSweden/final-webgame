@@ -4,6 +4,20 @@
 body {
 	background-color: white;
 }
+
+body, html {
+    height: 100%;
+}
+
+.bg {
+	background-image: url(/Users/annareid/Desktop/polarbear.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	height: 100%;
+}
+
 h1 {
 	text-align: center;
 	color: black;
@@ -51,5 +65,11 @@ h6 {
 .boxes {
   padding: 20px;
   margin-bottom: 10px;
-  border: 30px solid #000000;
+ 	background: #e6f2ff;
+}
+
+.pbsize {
+	width: 61.2px;
+	height: 50px;
+	float: left;
 }
