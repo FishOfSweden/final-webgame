@@ -2,13 +2,16 @@
 <html>
 	<head>
 		<title>CareBear</title>
+		<link href="https://fonts.googleapis.com/css?family=Arsenal|Julius+Sans+One|Nanum+Gothic" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Tajawal:300" rel="stylesheet">
 		<link rel="stylesheet" href="polarBearStyle.css">
 	</head>
-	<body>
+	<body onkeydown = "gameGo(event);">
     <header>
-      <h1>CareBear</h1>
+      <h1>Arctic Adventure</h1>
       <nav class="navbar">
-				<a href="polarBearMain.html">Home</a>
+				<img id= "bear" src = "pbanimation.png" class = "pbsize"></img>
+				<a href="index.html">Home</a>
 				<a href = "gamePage.html">The Game</a>
 				<a href="pBInfo.html">Further Information</a>
 				<a href="contactPagePB.html">Creators</a>
@@ -23,9 +26,18 @@
     bears are struggling to survive and are on the path to extinction. By creating this game, we hope to make it easier for people to learn about how global
     warming is changing the Arctic and threatening the survival of polar bears. </h3>
     </div>
+		<canvas id="myCanvas" width="768" height="576" style="background: url('sky.jpg')">
+			Your browser does not support canvas
+		</canvas>
+		<script src="PolarBear.js"></script>
+		<p id ="polartitle">Polar Bear</p>
     <div>
       <h3 class = "boxes"> For more information, please visit the information tab on this website and visit https://polarbearsinternational.org/.
       You can help to save the polar bears before it's too late. </h3>
     </div>
+
+		<div id="game">
+
+
 	</body>
 </html>

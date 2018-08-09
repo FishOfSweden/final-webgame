@@ -1,8 +1,13 @@
 /* {
 	border:1px solid red;
 }*/
+header {
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 150%;
+}
 body {
 	background-color: white;
+	font-family: 'Tajawal', sans-serif;
 }
 
 body, html {
@@ -16,6 +21,29 @@ body, html {
 	background-position: center;
 	background-size: cover;
 	height: 100%;
+}
+
+.boxes {
+  padding: 20px;
+  margin-bottom: 10px;
+	margin-top: 10px;
+ 	background: #e6f2ff;
+	border: 20px solid #000000;
+
+}
+.boxes2 {
+  padding: 20px;
+  margin-bottom: 10px;
+	margin-top: 10px;
+ 	background: #e6f2ff;
+	border: 20px solid #000000;
+
+}
+
+.pbsize {
+	width: 61.3px;
+	height: 50px;
+	float: left;
 }
 
 h1 {
@@ -102,6 +130,7 @@ footer {
   text-align: center;
   color: white;
 }
+<<<<<<< HEAD
 
 /* The Modal (background) */
 .modal {
@@ -148,6 +177,8 @@ footer {
     text-decoration: none;
     cursor: pointer;
 }
+=======
+>>>>>>> 759b91abc7586337ff2275e752e336b20f0ccabb
 
 h3 {
 	font-size: 100%;
@@ -156,7 +187,7 @@ h3 {
 }
 
 h6 {
-	font-size: 50%;
+	font-size: 70%;
 	text-align: center;
 	margin-bottom: 0;
 }
@@ -167,7 +198,14 @@ h6 {
   margin-bottom: 10px;
  	background: #e6f2ff;
 }
-
+#polartitle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 40px;
+}
 .pbsize {
 	width: 61.2px;
 	height: 50px;
