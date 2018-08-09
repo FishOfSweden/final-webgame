@@ -1,8 +1,13 @@
 /* {
 	border:1px solid red;
 }*/
+header {
+	font-family: 'Julius Sans One', sans-serif;
+	font-size: 150%;
+}
 body {
 	background-color: white;
+	font-family: 'Tajawal', sans-serif;
 }
 
 body, html {
@@ -16,6 +21,29 @@ body, html {
 	background-position: center;
 	background-size: cover;
 	height: 100%;
+}
+
+.boxes {
+  padding: 20px;
+  margin-bottom: 10px;
+	margin-top: 10px;
+ 	background: #e6f2ff;
+	border: 20px solid #000000;
+
+}
+.boxes2 {
+  padding: 20px;
+  margin-bottom: 10px;
+	margin-top: 10px;
+ 	background: #e6f2ff;
+	border: 20px solid #000000;
+
+}
+
+.pbsize {
+	width: 61.3px;
+	height: 50px;
+	float: left;
 }
 
 h1 {
@@ -48,7 +76,6 @@ hr {
 	align: center;
 	width: 25%;
 }
-<<<<<<< HEAD
 .card {
   box-shadow: 0 4px 8px 0 rgba(48, 209, 242, 0.2);
   width: 40%;
@@ -98,7 +125,6 @@ footer {
   background-color: black;
   text-align: center;
   color: white;
-=======
 
 h3 {
 	font-size: 100%;
@@ -107,21 +133,7 @@ h3 {
 }
 
 h6 {
-	font-size: 50%;
+	font-size: 70%;
 	text-align: center;
 	margin-bottom: 0;
-}
-
-
-.boxes {
-  padding: 20px;
-  margin-bottom: 10px;
- 	background: #e6f2ff;
-}
-
-.pbsize {
-	width: 61.2px;
-	height: 50px;
-	float: left;
->>>>>>> 6d0576edc5d17d60b89a9b2fdcbcf098e094b241
 }
