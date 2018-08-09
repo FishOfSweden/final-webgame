@@ -1,4 +1,5 @@
 
+
 //starting functions
 var strings = [
   "The polar bear is the Arctic's top predator."
