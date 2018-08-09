@@ -98,7 +98,7 @@ footer {
   background-color: black;
   text-align: center;
   color: white;
-=======
+}
 
 h3 {
 	font-size: 100%;
@@ -118,7 +118,14 @@ h6 {
   margin-bottom: 10px;
  	background: #e6f2ff;
 }
-
+#polartitle {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-size: 40px;
+}
 .pbsize {
 	width: 61.2px;
 	height: 50px;
