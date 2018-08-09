@@ -25,24 +25,16 @@ body, html {
 
 .boxes {
   padding: 20px;
-  margin-bottom: 10px;
-	margin-top: 10px;
- 	background: #e6f2ff;
-	border: 20px solid #000000;
-
-}
-.boxes2 {
-  padding: 20px;
-  margin-bottom: 10px;
-	margin-top: 10px;
+  margin-bottom: 1%;
+	margin-top: 1%;
  	background: #e6f2ff;
 	border: 20px solid #000000;
 
 }
 
 .pbsize {
-	width: 61.3px;
-	height: 50px;
+	width: 5%;
+	height: 5%;
 	float: left;
 }
 
@@ -128,23 +120,23 @@ footer {
 }
 
 h3 {
-	font-size: 100%;
+	font-size: 135%;
 	text-align: center;
 	margin-bottom: 0;
 }
 
 h6 {
-	font-size: 70%;
+	font-size: 71%;
 	text-align: center;
 	margin-bottom: 0;
 }
-
-
-.boxes {
-  padding: 20px;
-  margin-bottom: 10px;
- 	background: #e6f2ff;
+h5 {
+	font-size: 150%;
+	text-align: left;
+	margin-bottom: 0;
+	text-decoration: underline;
 }
+
 #polartitle {
 	position: absolute;
 	top: 50%;
@@ -152,9 +144,4 @@ h6 {
 	transform: translate(-50%, -50%);
 	text-align: center;
 	font-size: 40px;
-}
-.pbsize {
-	width: 61.2px;
-	height: 50px;
-	float: left;
 }
