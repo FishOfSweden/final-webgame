@@ -1,23 +1,22 @@
 <!DOCTYPE html>
 <html>
+<link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
 	<head>
+		<script src="PolarBear.js"></script>
 		<title>CareBear</title>
-		<link href="https://fonts.googleapis.com/css?family=Arsenal|Julius+Sans+One|Nanum+Gothic" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Tajawal:300" rel="stylesheet">
+		<script src="jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet" href="polarBearStyle.css">
-				<script src = "polarBearJS.js"></script>
 	</head>
-	<body onkeydown = "gameGo(event);">
+	<body onKeyDown="startgame()">
     <header>
-      <h1>Arctic Adventure</h1>
+      <h1>CareBear</h1>
       <nav class="navbar">
-				<img id= "bear" src = "pbanimation.png" class = "pbsize"></img>
-				<a href="index.html">Home</a>
+				<a href="polarBearMain.html">Home</a>
 				<a href = "gamePage.html">The Game</a>
 				<a href="pBInfo.html">Further Information</a>
 				<a href="contactPagePB.html">Creators</a>
 
-        </div>-->
+        </div>
       </nav>
     </header>
     <div>
@@ -30,15 +29,11 @@
 		<canvas id="myCanvas" width="768" height="576" style="background: url('sky.jpg')">
 			Your browser does not support canvas
 		</canvas>
-		<script src="PolarBear.js"></script>
-		<p id ="polartitle">Polar Bear</p>
+		<div id ="polartitle" onload="appear(polartitle)"><span class="firstletter">A</span><span class = "rest">pex</span></div>
+		<blink id="startnotif">Press ENTER to begin</blink>
     <div>
       <h3 class = "boxes"> For more information, please visit the information tab on this website and visit https://polarbearsinternational.org/.
       You can help to save the polar bears before it's too late. </h3>
     </div>
-
-		<div id="game">
-
-
 	</body>
 </html>
