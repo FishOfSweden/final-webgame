@@ -2,13 +2,16 @@ var paddleHeight = 10;
 var paddleWidth = 75;
 var rightPressed = false;
 var leftPressed = false;
+var ctx;
+
+var bear;
 
 //starting functions
 var strings = [
-  "The polar bear is the Arctic's top predator."
-  "The scientific name of the polar bear is Ursus maritimus."
-  "The polar bear is an endangered species."
-  "Two third of all polar bears live in Canadian land."
+  "The polar bear is the Arctic's top predator.",
+  "The scientific name of the polar bear is Ursus maritimus.",
+  "The polar bear is an endangered species.",
+  "Two third of all polar bears live in Canadian land.",
   "Polar bears rely on sea ice that allows them to have access to seals, their main food source. Sea ice is melting due to climate change, which is a major threat to the bears."
 ]
 
@@ -45,19 +48,43 @@ function keyUpHandler(e) {
         leftPressed = false;
     }
 }
-
+//draws the bear initially when the game starts
 function Bear(x, y){
-  this.x = x
-  this.y = y
+  this.x = x;
+  this.y = y;
+  this.image = new Image ();
+  this.image.src = "PolarBearDraw.png";
   this.drawBear = function(){
-    var im = document.getElementById("bearwalk1");
-    ctx.drawImage(img, this.x, this.y);
+    var img = document.getElementById("bearwalk1");
+    ctx.drawImage(img, this.x, this.y,194.12,150);
   }
-
-var Bear = new bear(5,0);
-bear.drawBear('Bear');
+}
+function startBear(){
+  bear = new Bear(30,300);
+  bear.drawBear();
 
 }
+
+function Icebergg(x, y){
+  this.x = x;
+  this.y = y;
+  this.image = new Image ();
+  this.image.src = "Iceberg.png";
+  this.drawBerg = function(){
+    var img = document.getElementById("iceberg1");
+    ctx.drawImage(img, this.x, this.y,337.46,200);
+  }
+}
+function startIcebergg(){
+  iceB = new Icebergg(400,300);
+  iceB.drawBerg();
+
+}
+
+
+
+
+
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPaddle();
@@ -71,12 +98,15 @@ function draw() {
     }
 }
 function startgame(x){
+
   if (x.keyCode == 13){
+    ctx = document.getElementById('myCanvas').getContext('2d');
     document.getElementById('myCanvas').style.backgroundImage="url('ice.jpg')"
     document.getElementById("polartitle").style.display = "none";
     clearInterval(notif);
     document.getElementById("startnotif").style.display = "none";
-
+    startBear();
+    startIcebergg();
   }
 }
 var notif=setInterval(function(){

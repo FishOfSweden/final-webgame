@@ -5,6 +5,13 @@ header {
 	font-family: 'Julius Sans One', sans-serif;
 	font-size: 150%;
 }
+canvas {
+   padding-left: 0;
+	 padding-right: 0;
+	 margin-left: auto;
+	 margin-right: auto;
+	 display: block;
+}
 body {
 	background-color: white;
 	font-family: 'Tajawal', sans-serif;
