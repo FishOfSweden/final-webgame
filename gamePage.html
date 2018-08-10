@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
-<link href="https://fonts.googleapis.com/css?family=Lekton" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Arsenal|Julius+Sans+One|Nanum+Gothic" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Tajawal:300" rel="stylesheet">
 	<head>
 		<script src="PolarBear.js"></script>
-		<title>CareBear</title>
+		<title>Arctic Adventure</title>
 		<script src="jquery-3.3.1.min.js"></script>
 		<link rel="stylesheet" href="polarBearStyle.css">
 	</head>
 	<body onKeyDown="startgame()">
     <header>
-      <h1>CareBear</h1>
+      <h1>Arctic Adventure</h1>
       <nav class="navbar">
 				<a href="polarBearMain.html">Home</a>
 				<a href = "gamePage.html">The Game</a>
@@ -28,6 +29,8 @@
     </div>
 		<canvas id="myCanvas" width="768" height="576" style="background: url('sky.jpg')">
 			Your browser does not support canvas
+
+			<img id= "bearwalk1" src = "/Users/annareid/Desktop/polarbear/final-webgame/PolarBearDraw.png"></img>
 		</canvas>
 		<div id ="polartitle" onload="appear(polartitle)"><span class="firstletter">A</span><span class = "rest">pex</span></div>
 		<blink id="startnotif">Press ENTER to begin</blink>

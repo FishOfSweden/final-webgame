@@ -45,6 +45,19 @@ function keyUpHandler(e) {
         leftPressed = false;
     }
 }
+
+function Bear(x, y){
+  this.x = x
+  this.y = y
+  this.drawBear = function(){
+    var im = document.getElementById("bearwalk1");
+    ctx.drawImage(img, this.x, this.y);
+  }
+
+var Bear = new bear(5,0);
+bear.drawBear('Bear');
+
+}
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPaddle();
@@ -63,6 +76,7 @@ function startgame(x){
     document.getElementById("polartitle").style.display = "none";
     clearInterval(notif);
     document.getElementById("startnotif").style.display = "none";
+
   }
 }
 var notif=setInterval(function(){
