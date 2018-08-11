@@ -19,9 +19,10 @@ var strings = [
 ]
 
 //the animate bear function
+/*
 window.onload = function() {
    bearAnimation();
- }
+ }*/
 
  function bearAnimation(){
       ctx = document.getElementById("myCanvas").getContext('2d');
