@@ -34,7 +34,7 @@ window.onload = function() {
       }
 
       var shift = 0;
-      var frameWidth = 150;
+      var frameWidth = 100;
       var frameHeight = 116;
       var totalFrames = 7;
       var currentFrame = 0;
