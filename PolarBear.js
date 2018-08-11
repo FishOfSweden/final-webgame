@@ -20,16 +20,16 @@ var strings = [
 
 //the animate bear function
 
-window.onload = function() {
-   bearAnimation();
- }
+//window.onload = function() {
+//   bearAnimation();
+// }
 
  function bearAnimation(){
       ctx = document.getElementById("myCanvas").getContext('2d');
       var myImage = new Image();
       myImage.src = "polarbearREALSS.png";
       myImage.addEventListener("load", loadImage, false);
-      /*
+      
       function loadImage(e) {
         animate();
       }
@@ -41,7 +41,7 @@ window.onload = function() {
       var currentFrame = 0;
 
       function animate() {
-        ctx.clearRect(30, 20, 150, 116);
+        ctx.clearRect(30, 300, 100, 116);
         ctx.drawImage(myImage, shift, 0, frameWidth, frameHeight,
                           30, 300, frameWidth, frameHeight);
 
@@ -53,7 +53,7 @@ window.onload = function() {
         }
         currentFrame++;
         requestAnimationFrame(animate);
-      }*/
+      }
     }
 //where the new animation code ends
 
