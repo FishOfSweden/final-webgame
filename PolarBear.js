@@ -35,7 +35,7 @@ var strings = [
       }
      
       var shift = 0;
-      var frameWidth = 104;
+      var frameWidth = 98;
       var frameHeight = 116;
       var totalFrames = 7;
       var currentFrame = 0;
