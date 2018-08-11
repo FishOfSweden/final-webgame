@@ -19,10 +19,10 @@ var strings = [
 ]
 
 //the animate bear function
-/*
+
 window.onload = function() {
    bearAnimation();
- }*/
+ }
 
  function bearAnimation(){
       ctx = document.getElementById("myCanvas").getContext('2d');
@@ -161,7 +161,7 @@ function startgame(x){
     document.getElementById("polartitle").style.display = "none";
     clearInterval(notif);
     document.getElementById("startnotif").style.display = "none";
-    //bearAnimation();
+    bearAnimation();
 
     //startBear();
     //startIcebergg();
