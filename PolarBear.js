@@ -161,7 +161,7 @@ function startgame(x){
     document.getElementById("polartitle").style.display = "none";
     clearInterval(notif);
     document.getElementById("startnotif").style.display = "none";
-    bearAnimation();
+    //bearAnimation();
 
     //startBear();
     //startIcebergg();
