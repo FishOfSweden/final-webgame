@@ -32,7 +32,7 @@ window.onload = function() {
       function loadImage(e) {
         animate();
       }
-
+      /*
       var shift = 0;
       var frameWidth = 100;
       var frameHeight = 116;
@@ -52,7 +52,7 @@ window.onload = function() {
         }
         currentFrame++;
         requestAnimationFrame(animate);
-      }
+      }*/
     }
 //where the new animation code ends
 
