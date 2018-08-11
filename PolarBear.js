@@ -29,11 +29,11 @@ window.onload = function() {
       var myImage = new Image();
       myImage.src = "polarbearREALSS.png";
       myImage.addEventListener("load", loadImage, false);
-
+      /*
       function loadImage(e) {
         animate();
       }
-      /*
+     
       var shift = 0;
       var frameWidth = 100;
       var frameHeight = 116;
