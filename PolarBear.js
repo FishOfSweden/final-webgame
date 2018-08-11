@@ -24,7 +24,7 @@ window.onload = function() {
  }
 
  function bearAnimation(){
-      var ctx = document.getElementById("myCanvas").getContext('2d');
+      ctx = document.getElementById("myCanvas").getContext('2d');
       var myImage = new Image();
       myImage.src = "polarbearREALSS.png";
       myImage.addEventListener("load", loadImage, false);
