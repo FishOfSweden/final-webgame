@@ -178,7 +178,13 @@ footer {
 
 h3 {
 	font-size: 135%;
-	text-align: center;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+h2 {
+	font-size: 100%;
+	text-align: left;
 	margin-bottom: 0;
 }
 
@@ -223,12 +229,42 @@ h5 {
 	float: left;
 }
 
-/* {
-for the bear to work
-}*/
-/*#bearwalk1 {
-  height: 194.12px;
-  width: 150px;
-background:
-url("PolarBearDraw1.png") 0px 0px;
-}*/
+/* css slideshow code */
+.slideshow{
+	margin: 50px auto;
+	position: relative;
+	width: 556px;
+	height: 304px;
+	padding: 20px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .1}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .1}
+  to {opacity: 1}
+}

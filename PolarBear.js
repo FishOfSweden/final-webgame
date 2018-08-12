@@ -6,7 +6,6 @@ var ctx;
 var bear;
 var pbImage = false;
 
-//the animation of the bear to move
 
 
 //starting functions
@@ -19,40 +18,31 @@ var strings = [
 ]
 
 //the animate bear function
-
-//window.onload = function() {
- //  bearAnimation();
-// }
-
  function bearAnimation(){
       ctx = document.getElementById("myCanvas").getContext('2d');
       var myImage = new Image();
       myImage.src = "polarbearREALSS.png";
       myImage.addEventListener("load", loadImage, false);
-
       function loadImage(e) {
         animate();
       }
-
       var shift = 0;
       // change these variables to edit the frame of the bear
       var frameWidth = 104.2;
+      //for the movement
+
       var frameHeight = 116;
-      
       var totalFrames = 7;
       var currentFrame = 0;
       // added lines that keep track of the frames passed
-
       // counts the number of ticks
       var tickCount = 0;
       // number of frames to skip, increase to go slower decrease to go faster
-      var ticksPerFrame = 20;
-
+      var ticksPerFrame = 5;
       function animate() {
-        ctx.clearRect(30, 300, frameWidth, frameHeight);
+        ctx.clearRect(30, 400, frameWidth, frameHeight);
         ctx.drawImage(myImage, shift, 0, frameWidth, frameHeight,
-                          30, 300, frameWidth, frameHeight);
-
+                          30, 400, frameWidth, frameHeight);
         // if we are over the number of ticks to skip
         if (tickCount > ticksPerFrame){
           // shift to the next frame
@@ -67,14 +57,72 @@ var strings = [
         currentFrame++;
         // reset the tick count if we reached the max ticks per second
         tickCount =0;
-
       }
         // increment the tick counter
         tickCount += 1;
         requestAnimationFrame(animate);
+///used for bear movement. frame height and width above also used
+        var jumping = true;
+        var x = 144;
+        var xVelocity = 0;
+        var yVelocity = 0;
+        var y = 0;
+        //
+        //making the bear move around with keyboard, DOES NOT WORK YET
+        window.addEventListener("keydown", controller.keyListener);
+        window.addEventListener("keyup", controller.keyListener);
+        controller = {
+          left: false,
+          right: false,
+          up: false,
+          keyListener: function(event) {
+            var key_state = (event.type == "keydown")?true:false;
+            switch(event.keyCode){
+              case 37:
+                controller.left = key_state;
+              break;
+              case 38:
+                controller.up = key_state;
+              break;
+              case 39:
+                controller.right = key_state;
+              break;
+            }
+          }
+        };
+
+
+        var context, controller, rectangle, loop;
+        context = document.getElementById("myCanvas").getContext("2d");
+        loop = function() {
+          if (controller.up && myImage.jumping == false) {
+            myImage.yVelocity -= 20;
+            myImage.jumping = true;
+          }
+          if (controller.left) {
+            myImage.xVelocity -=0.5;
+          }
+          if (controller.right) {
+            myImage.xVelocity += 0.5;
+
+          }
+          //math and physics stuff for jumping and moving
+          myImage.yVelocity += 1.5;
+          myImage.x += myImage.xVelocity;
+          myImage.y += myImage.yVelocity;
+          myImage.xVelocity *=0.9;
+          myImage.yVelocity*=0.9;
+
+        }
+        if (myImage.x < -32){
+          myImage.x =30;
+        } else if (myImage.x > 768) {// if rectangle goes past right boundary
+          myImage.x = 30;
+        }
+        // call update when the browser is ready to draw again
+        window.requestAnimationFrame(loop);
     }
 }
-//where the new animation code ends
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -110,8 +158,6 @@ function keyUpHandler(e) {
     }
 }
 
-
-
 //draws the bear initially when the game starts
 /*function Bear(x, y){
   this.x = x;
@@ -127,7 +173,6 @@ function keyUpHandler(e) {
     this.moveBearDown = function(){
       this.y = this.y + 100;
     }
-
   }
 }
 function startBear(){
@@ -135,11 +180,9 @@ function startBear(){
   bear.drawBear();
 
 }
-
 //function animateBear(){
 //  document.getElementById("bearwalk1").style.backgroundPosition = `-96px 0px`;
-//}
-
+//}*/
 function Icebergg(x, y){
   this.x = x;
   this.y = y;
@@ -150,21 +193,15 @@ function Icebergg(x, y){
     ctx.drawImage(img, this.x, this.y,337.46,200);
   }
 }
+
 function startIcebergg(){
   iceB = new Icebergg(400,300);
   iceB.drawBerg();
-
 }
-
-*/
-
-
 
 function draw() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     drawPaddle();
-
-
     if(rightPressed && paddleX < canvas.width-paddleWidth) {
         paddleX += 7;
     }
@@ -181,14 +218,7 @@ function startgame(x){
     clearInterval(notif);
     document.getElementById("startnotif").style.display = "none";
     bearAnimation();
-
-    //startBear();
-    //startIcebergg();
-    //if(x.keyCode == 38){
-    //  moveBearUp();
-    //  time.wait(0.2);
-    //  moveBearDown();
-
+    startIcebergg();
     }
 
   }

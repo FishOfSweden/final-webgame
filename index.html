@@ -5,6 +5,7 @@
 		<link href="https://fonts.googleapis.com/css?family=Tajawal:300" rel="stylesheet">
 		<link rel="stylesheet" href="polarBearStyle.css">
 		<script src = "PolarBear.js"></script>
+		<script src="jquery-3.3.1.min.js"></script>
 	</head>
 	<body class = "bg">
     <header>
@@ -24,13 +25,46 @@
 	our knowledge of code that we learned over five weeks of study. We chose to apply our education to create a game and website to spread awareness about the threats
 that polar bears are facing due to global warming and climate change. </h1>
 		</div>
+		<div class="slideshow" >
+		  <div class="mySlides fade">
+		    <img src="polarbear1.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="polarbear2.jpg" style="width:100%">
+		  </div>
+
+		  <div class="mySlides fade">
+		    <img src="polarbear3.jpg" style="width:100%">
+		  </div>
+
+			<div class="mySlides fade">
+				<img src="polarbear4.jpg" style="width:100%">
+			</div>
+		</div>
+
+		<script>
+			var slideIndex = 0;
+	showSlides();
+
+	function showSlides() {
+	    var i;
+	    var slides = document.getElementsByClassName("mySlides");
+	    for (i = 0; i < slides.length; i++) {
+	        slides[i].style.display = "none";
+	    }
+	    slideIndex++;
+	    if (slideIndex > slides.length) {slideIndex = 1}
+	    slides[slideIndex-1].style.display = "block";
+	    setTimeout(showSlides, 5000);
+	}
+
+
+		</script>
+
 
 		<div>
-    <h3 class = "boxes"> Game Purpose: This game is meant to be an interactive platform where users can learn about how climate change impacts polar bears in a simple and accessible
-    way. Over the course of the game, the icebergs get smaller and eventually disappear. This is meant to symbolize how global warming has resulted in a loss
-    of sea ice in the Arctic. Polar bears depend on sea ice to survive; sea ice serves as their hunting ground. With the sea ice melting, polar
-    bears are struggling to survive and are on the path to extinction. By creating this game, we hope to make it easier for people to learn about how global
-    warming is changing the Arctic and threatening the survival of polar bears. </h3>
+    <h1 class = "boxes"> Check out this slideshow with a bunch of cute images of polar bears! On this website you will can find our game, details about what you can do to help, and information about us! We hope you enjoy! </h1>
     </div>
 
 	</body>
