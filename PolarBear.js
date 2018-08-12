@@ -29,32 +29,51 @@ var strings = [
       var myImage = new Image();
       myImage.src = "polarbearREALSS.png";
       myImage.addEventListener("load", loadImage, false);
-      
+
       function loadImage(e) {
         animate();
       }
-     
+
       var shift = 0;
-      var frameWidth = 104;
+      // change these variables to edit the frame of the bear
+      var frameWidth = 104.2;
       var frameHeight = 116;
+      
       var totalFrames = 7;
       var currentFrame = 0;
+      // added lines that keep track of the frames passed
+
+      // counts the number of ticks
+      var tickCount = 0;
+      // number of frames to skip, increase to go slower decrease to go faster
+      var ticksPerFrame = 30;
 
       function animate() {
-        ctx.clearRect(30, 300, 100, 116);
+        ctx.clearRect(30, 300, frameWidth, frameHeight);
         ctx.drawImage(myImage, shift, 0, frameWidth, frameHeight,
                           30, 300, frameWidth, frameHeight);
 
-        shift += frameWidth + 1;
-
-        if (currentFrame == totalFrames) {
-          shift = 0;
-          currentFrame = 0;
-        }
+        // if we are over the number of ticks to skip
+        if (tickCount > ticksPerFrame){
+          // shift to the next frame
+          shift += frameWidth + 1;
+          //  if we are at the end of the sprite sheet
+          if (currentFrame == totalFrames){
+            // shift to the beginning
+            shift = 0;
+            currentFrame = 0;
+          }
+        // increase the current frame number
         currentFrame++;
-        requestAnimationFrame(animate);
+        // reset the tick count if we reached the max ticks per second
+        tickCount =0;
+
       }
+        // increment the tick counter
+        tickCount += 1;
+        requestAnimationFrame(animate);
     }
+}
 //where the new animation code ends
 
 document.addEventListener("keydown", keyDownHandler, false);
