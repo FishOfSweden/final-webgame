@@ -46,7 +46,7 @@ var strings = [
       // counts the number of ticks
       var tickCount = 0;
       // number of frames to skip, increase to go slower decrease to go faster
-      var ticksPerFrame = 30;
+      var ticksPerFrame = 20;
 
       function animate() {
         ctx.clearRect(30, 300, frameWidth, frameHeight);
