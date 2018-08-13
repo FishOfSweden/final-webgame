@@ -336,7 +336,7 @@ function startgame(){
     ctx = document.getElementById('myCanvas').getContext('2d');
     document.getElementById('myCanvas').style.backgroundImage="url('ice.jpg')"
     document.getElementById("polartitle").style.display = "none";
-    //document.getElementById("polartitle2").style.display = "none";
+    document.getElementById("polartitle2").style.display = "none";
     clearInterval(notif);
     document.getElementById("startnotif").style.display = "none";
     //bearAnimation();
