@@ -9,7 +9,7 @@
 		<link rel="stylesheet" href="polarBearStyle.css">
 
 	</head>
-	<body>
+	<body onkeydown = "keyCheck(event)">
     <header>
       <h1>Arctic Adventure</h1>
       <nav class="navbar">
@@ -32,9 +32,17 @@
     warming is changing the Arctic and threatening the survival of polar bears. </h3>
     </div>
 		<div id= "gamePart">
-		<canvas onKeyDown="startgame()" id="myCanvas" width="768" height="576" style="background: url('sky.jpg')">
+		<canvas onKeyDown="keyDownHandler(event)" id="myCanvas" width="768" height="576" style="background: url('sky.jpg')">
 			Your browser does not support canvas
 			<img id= "iceberg1" src = "Iceberg.png"></img>
+			<img id= "bearwalk1" src = "PolarBearDraw1.png"></img>
+			<img id= "bearwalk2" src = "PolarBearDraw2.png"></img>
+			<img id= "bearwalk3" src = "PolarBearDraw3.png"></img>
+			<img id= "bearwalk4" src = "PolarBearDraw4.png"></img>
+			<img id= "bearwalk5" src = "PolarBearDraw5.png"></img>
+			<img id= "bearwalk6" src = "PolarBearDraw6.png"></img>
+			<img id= "bearwalk7" src = "PolarBearDraw7.png"></img>
+			<img id= "bearwalk8" src = "PolarBearDraw8.png"></img>
 		</canvas>
 		<script src="PolarBear.js"></script>
 	</div>
