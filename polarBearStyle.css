@@ -5,6 +5,13 @@ header {
 	font-family: 'Julius Sans One', sans-serif;
 	font-size: 150%;
 }
+canvas {
+   padding-left: 0;
+	 padding-right: 0;
+	 margin-left: auto;
+	 margin-right: auto;
+	 display: block;
+}
 body {
 	background-color: white;
 	font-family: 'Tajawal', sans-serif;
@@ -25,24 +32,16 @@ body, html {
 
 .boxes {
   padding: 20px;
-  margin-bottom: 10px;
-	margin-top: 10px;
- 	background: #e6f2ff;
-	border: 20px solid #000000;
-
-}
-.boxes2 {
-  padding: 20px;
-  margin-bottom: 10px;
-	margin-top: 10px;
+  margin-bottom: 1%;
+	margin-top: 1%;
  	background: #e6f2ff;
 	border: 20px solid #000000;
 
 }
 
 .pbsize {
-	width: 61.3px;
-	height: 50px;
+	width: 5%;
+	height: 5%;
 	float: left;
 }
 
@@ -96,6 +95,9 @@ hr {
 .card img {
 	width: 100%;
 	height: 40%;
+}
+.card .imgs {
+	height: 350px;
 }
 .title {
   color: gray;
@@ -178,30 +180,51 @@ footer {
 }
 
 h3 {
+	font-size: 135%;
+	text-align: left;
+	margin-bottom: 0;
+}
+
+h2 {
 	font-size: 100%;
-	text-align: center;
+	text-align: left;
 	margin-bottom: 0;
 }
 
 h6 {
-	font-size: 70%;
+	font-size: 71%;
 	text-align: center;
 	margin-bottom: 0;
 }
-
-
-.boxes {
-  padding: 20px;
-  margin-bottom: 10px;
- 	background: #e6f2ff;
+h5 {
+	font-size: 150%;
+	text-align: left;
+	margin-bottom: 0;
+	text-decoration: underline;
 }
+
 #polartitle {
 	position: absolute;
-	top: 50%;
 	left: 50%;
+	top:80%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	font-size: 40px;
+	font-family: Presa;
+	color: #d9d9d9;
+}
+#startnotif{
+	font-size: 30px;
+	position: absolute;
+	top: 115%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: 'Lekton', sans-serif;
+}
+.firstletter {
+	font-size: 300px;
+}
+.rest {
+	font-size: 150px;
 }
 .pbsize {
 	width: 61.2px;
@@ -209,3 +232,42 @@ h6 {
 	float: left;
 }
 
+/* css slideshow code */
+.slideshow{
+	margin: 50px auto;
+	position: relative;
+	width: 556px;
+	height: 304px;
+	padding: 20px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.slideshow > div {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+.mySlides {
+    display: none;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .1}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .1}
+  to {opacity: 1}
+}
