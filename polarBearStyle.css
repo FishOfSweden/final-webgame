@@ -206,11 +206,21 @@ h5 {
 #polartitle {
 	position: absolute;
 	left: 50%;
-	top:80%;
+	top:75%;
 	transform: translate(-50%, -50%);
 	text-align: center;
-	font-family: Presa;
-	color: #d9d9d9;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
+}
+#polartitle2 {
+	position: absolute;
+	font-size: 30px;
+	left: 50%;
+	top:90%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+	color: white;
 }
 #startnotif{
 	font-size: 30px;
@@ -220,11 +230,59 @@ h5 {
 	transform: translate(-50%, -50%);
 	font-family: 'Lekton', sans-serif;
 }
+#bgstory{
+	color: white;
+	position: absolute;
+	left: 50%;
+	top:62%;
+	margin-left: 80px;
+	padding-right: 140px;
+	transform: translate(-50%, -50%);
+	text-align: left;
+	display:none;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 12px;
+}
+#instruct{
+	color: white;
+	position: absolute;
+	left: 50%;
+	top:80%;
+	margin-left: 78px;
+	padding-right: 140px;
+	transform: translate(-50%, -50%);
+	text-align: left;
+	display:none;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 12px;
+}
+#spacecontinue{
+	color: white;
+	position: absolute;
+	left: 50%;
+	top:100%;
+	margin-left: 78px;
+	padding-right: 140px;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	display:none;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 16px;
+}
 .firstletter {
-	font-size: 300px;
+	font-size: 100px;
 }
 .rest {
-	font-size: 150px;
+	font-size: 60px;
+}
+.strokeme
+{
+    color: white;
+    text-shadow:
+    -1px -1px 0 #666666,
+    1px -1px 0 #666666,
+    -1px 1px 0 #666666,
+    1px 1px 0 #666666;
 }
 .pbsize {
 	width: 61.2px;
