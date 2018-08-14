@@ -159,10 +159,16 @@ footer {
 }
 
 .modal-content .size {
-	height: 50%;
+	height: 100%;
 	width: 50%;
 	float: left;
 	margin-right: 3%;
+}
+.modal-content h6 {
+	font-size: 140%;
+}
+.modal-content p {
+	font-size: 110%;
 }
 /* The Close Button */
 .close {
