@@ -258,7 +258,24 @@ function startgame(){
     document.getElementById("startnotif").style.display = "none";
     //bearAnimation();
     //startIcebergg();
+    document.getElementById("bgstory").style.display="block";
+    document.getElementById("instruct").style.display="block";
+    document.getElementById("spacecontinue").style.display="block";
+    startgame = true;
+    drawDial();
     winning = true;
     bearAnimate();
     sealShowUp();
     }
+function drawDial(){
+  ctx.globalAlpha=0.5;
+  var dialoguebox = ctx.fillRect((canvas.width/2)-(250),(canvas.height/2)-(200),500,400);
+  clear();
+}
+function clear(e){
+  if (e.keyCode === 32){
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    document.getElementById("bgstory").style.display="none";
+    document.getElementById("instruct").style.display="none";
+    document.getElementById("spacecontinue").style.display="none";
+  }
