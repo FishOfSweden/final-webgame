@@ -14,6 +14,12 @@ var speedScreen = 6;
 var winning = false;
 var bear = new Bear(30,300);
 var number = 1;
+var notif=setInterval(function(){
+      $('blink').each(function() {
+        $(this).toggle();
+      });
+    }, 350);
+
 
 //starting functions
 var strings = [
@@ -52,7 +58,7 @@ function Bear(x, y){
 
 function keyCheck(e){
   if(winning == true){
-    if (bear.y < 350){
+    if (bear.y < 500){
       if(e.keyCode === 39) {
           bear.moveBearRight();
           ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -344,8 +350,3 @@ function startgame(){
     winning = true;
     bearAnimate();
     }
-var notif=setInterval(function(){
-      $('blink').each(function() {
-        $(this).toggle();
-      });
-    }, 350);
