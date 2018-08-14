@@ -280,7 +280,3 @@ function drawDial(){
   ctx.globalAlpha=0.5;
   var dialoguebox = ctx.fillRect((myCanvas.width/2)-(250),(myCanvas.height/2)-(200),500,400);
 }
-//function clear(e){
-
-//  }
-//}
