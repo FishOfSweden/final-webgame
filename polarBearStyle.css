@@ -99,6 +99,9 @@ hr {
 .card .imgs {
 	height: 600px;
 }
+.card .imgs1 {
+	height: 325px;
+}
 .title {
   color: gray;
   font-size: 18px;
