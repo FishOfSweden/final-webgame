@@ -14,8 +14,8 @@ var speedScreen = 6;
 var winning = false;
 var bear = new Bear(30,300);
 var sealDraw1 = new Seal1(90, 450);
-var sealDraw2 = new Seal2(300, 400);
-var sealDraw3 = new Seal3 (500, 350);
+var sealDraw2 = new Seal2(300, 500);
+var sealDraw3 = new Seal3(650, 400);
 var number = 1;
 var sealAppear = 1;
 var sealAppear2 = 1;
@@ -294,7 +294,7 @@ function Seal3(x, y){
   this.image.src = "SealEyebrows.png";
   this.drawSeal3 = function(id){
     var img = document.getElementById(id);
-    ctx.drawImage(img, this.x, this.y,93.7,65);
+    ctx.drawImage(img, this.x, this.y, 93.7,65);
   }
 }
 
@@ -307,7 +307,9 @@ function sealShowUp3(){
   }
 }
 
+/*function collisionDetection(x, y) {
 
+}*/
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);

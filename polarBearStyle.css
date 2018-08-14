@@ -99,6 +99,9 @@ hr {
 .card .imgs {
 	height: 600px;
 }
+.card .imgs1 {
+	height: 325px;
+}
 .title {
   color: gray;
   font-size: 18px;
@@ -159,10 +162,16 @@ footer {
 }
 
 .modal-content .size {
-	height: 50%;
+	height: 100%;
 	width: 50%;
 	float: left;
 	margin-right: 3%;
+}
+.modal-content h6 {
+	font-size: 140%;
+}
+.modal-content p {
+	font-size: 110%;
 }
 /* The Close Button */
 .close {
@@ -225,7 +234,7 @@ h5 {
 #startnotif{
 	font-size: 30px;
 	position: absolute;
-	top: 105%;
+	top: 115%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: 'Lekton', sans-serif;
