@@ -225,7 +225,7 @@ h5 {
 #startnotif{
 	font-size: 30px;
 	position: absolute;
-	top: 115%;
+	top: 105%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-family: 'Lekton', sans-serif;

@@ -66,41 +66,51 @@ function backgroundClear(){
   sealShowUp();
   sealShowUp2();
   sealShowUp3();
-
 }
 
 
 function keyCheck(e){
-  if(winning == true){
-    if (bear.y < 500){
-      if(e.keyCode === 39) {
-          bear.moveBearRight();
-          backgroundClear();
-          bearAnimate();
+    if(winning == true){
+      if (e.keyCode === 32){
+        ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+        ctx.globalAlpha=1;
+        bearAnimate();
+        sealShowUp();
+        sealShowUp2();
+        sealShowUp3();
+        document.getElementById("bgstory").style.display="none";
+        document.getElementById("instruct").style.display="none";
+        document.getElementById("spacecontinue").style.display="none";
       }
-      else if(e.keyCode === 37) {
-          bear.moveBearLeft();
-          backgroundClear();
-          bearAnimate();
-      }
-      else if(e.keyCode === 38){
-            bear.moveBearUp();
+      if (bear.y < 500){
+        if(e.keyCode === 39) {
+            bear.moveBearRight();
             backgroundClear();
             bearAnimate();
-          }
-      else if(e.keyCode === 40){
-            bear.moveBearDown();
+        }
+        else if(e.keyCode === 37) {
+            bear.moveBearLeft();
             backgroundClear();
             bearAnimate();
+        }
+        else if(e.keyCode === 38){
+              bear.moveBearUp();
+              backgroundClear();
+              bearAnimate();
+            }
+        else if(e.keyCode === 40){
+              bear.moveBearDown();
+              backgroundClear();
+              bearAnimate();
+            }
           }
         }
-      }
-      else{
-        if(e.keyCode === 13){
-          startgame();
+        else{
+          if(e.keyCode === 13){
+            startgame();
+          }
         }
-      }
-  }
+    }
 
 function bearAnimate(){
   var number1;
@@ -225,7 +235,7 @@ function drawPaddle() {
 
 function keyDownHandler(e) {
     if(e.keyCode == 13) {
-      startgame();
+      //startgame();
     }
 }
 
@@ -264,18 +274,13 @@ function startgame(){
     startgame = true;
     drawDial();
     winning = true;
-    bearAnimate();
-    sealShowUp();
     }
 function drawDial(){
+
   ctx.globalAlpha=0.5;
-  var dialoguebox = ctx.fillRect((canvas.width/2)-(250),(canvas.height/2)-(200),500,400);
-  clear();
+  var dialoguebox = ctx.fillRect((myCanvas.width/2)-(250),(myCanvas.height/2)-(200),500,400);
 }
-function clear(e){
-  if (e.keyCode === 32){
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    document.getElementById("bgstory").style.display="none";
-    document.getElementById("instruct").style.display="none";
-    document.getElementById("spacecontinue").style.display="none";
-  }
+//function clear(e){
+
+//  }
+//}
