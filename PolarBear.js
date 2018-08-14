@@ -20,11 +20,17 @@ var number = 1;
 var sealAppear = 1;
 var sealAppear2 = 1;
 var sealAppear3 = 1;
+/*var myBackground;
+var backgroundNum = 1;
+var bgDraw1 = new background (0,0);
+var bgDraw2 = new background2 (0,0);
+var bgDraw3 = new background3 (0,0);*/
 var notif=setInterval(function(){
       $('blink').each(function() {
         $(this).toggle();
       });
     }, 350);
+
 
 
 
@@ -37,7 +43,20 @@ var strings = [
   "Polar bears rely on sea ice that allows them to have access to seals, their main food source. Sea ice is melting due to climate change, which is a major threat to the bears."
 ]
 
+//setting the background images
+var backgroundImages = new function () {
+  this.myCanvas = new Image();
+  this.myCanvas.src = "sky.jpg";
 
+}
+
+
+
+
+
+
+
+//moving the objects and animals in the game
 function Bear(x, y){
   this.x = x;
   this.y = y;
@@ -63,9 +82,6 @@ function Bear(x, y){
 
 function backgroundClear(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
-  sealShowUp();
-  sealShowUp2();
-  sealShowUp3();
 }
 
 
@@ -86,21 +102,33 @@ function keyCheck(e){
         if(e.keyCode === 39) {
             bear.moveBearRight();
             backgroundClear();
+            sealShowUp();
+            sealShowUp2();
+            sealShowUp3();
             bearAnimate();
         }
         else if(e.keyCode === 37) {
             bear.moveBearLeft();
             backgroundClear();
+            sealShowUp();
+            sealShowUp2();
+            sealShowUp3();
             bearAnimate();
         }
         else if(e.keyCode === 38){
               bear.moveBearUp();
               backgroundClear();
+              sealShowUp();
+              sealShowUp2();
+              sealShowUp3();
               bearAnimate();
             }
         else if(e.keyCode === 40){
               bear.moveBearDown();
               backgroundClear();
+              sealShowUp();
+              sealShowUp2();
+              sealShowUp3();
               bearAnimate();
             }
           }
@@ -150,6 +178,71 @@ function bearAnimate(){
     number=1;
   }
 }
+
+///going through the backgrounds
+
+
+/*function background(x, y){
+  this.x = x;
+  this.y = y;
+  this.image = new Image ();
+  this.image.src = "bg1.jpg";
+  this.drawbg1 = function(id){
+    var img = document.getElementById(id);
+    ctx.drawImage(img, this.x, this.y,768,576);
+  }
+}
+
+function background1ShowUp(){
+  var number1;
+  if (backgroundNum==1){
+    number1 = "bg1";
+    bgDraw1.drawbg1(number1);
+    backgroundNum=1;
+  }
+}
+
+function background2(x, y){
+  this.x = x;
+  this.y = y;
+  this.image = new Image ();
+  this.image.src = "bg2.jpg";
+  this.drawbg2 = function(id){
+    var img = document.getElementById(id);
+    ctx.drawImage(img, this.x, this.y,768,576);
+  }
+}
+
+function background2ShowUp(){
+  var number1;
+  if (backgroundNum==1){
+    number1 = "bg1";
+    bgDraw2.drawbg2(number1);
+    backgroundNum=1;
+  }
+}
+
+
+function background3(x, y){
+  this.x = x;
+  this.y = y;
+  this.image = new Image ();
+  this.image.src = "bg3.jpg";
+  this.drawbg3 = function(id){
+    var img = document.getElementById(id);
+    ctx.drawImage(img, this.x, this.y,768,576);
+  }
+}
+
+function background1ShowUp(){
+  var number1;
+  if (backgroundNum==1){
+    number1 = "bg1";
+    bgDraw3.drawbg3(number1);
+    backgroundNum=1;
+  }
+}*/
+
 
 
 function Seal1(x, y){
@@ -261,7 +354,15 @@ function draw() {
 
 function startgame(){
     ctx = document.getElementById('myCanvas').getContext('2d');
-    document.getElementById('myCanvas').style.backgroundImage="url('ice.jpg')"
+    if(0 <= bear.x <= 390){
+      document.getElementById('myCanvas').style.backgroundImage="url('bg1.jpg')"
+    }
+    else if(390 <= bear.x <= 450){
+      document.getElementById('myCanvas').style.backgroundImage="url('bg2.jpg')"
+    }
+    else if(450 <= bear.x <= 576){
+      document.getElementById('myCanvas').style.backgroundImage="url('bg3.jpg')"
+    }
     document.getElementById("polartitle").style.display = "none";
     document.getElementById("polartitle2").style.display = "none";
     clearInterval(notif);
@@ -280,7 +381,3 @@ function drawDial(){
   ctx.globalAlpha=0.5;
   var dialoguebox = ctx.fillRect((myCanvas.width/2)-(250),(myCanvas.height/2)-(200),500,400);
 }
-//function clear(e){
-
-//  }
-//}
