@@ -20,17 +20,17 @@ var number = 1;
 var sealAppear = 1;
 var sealAppear2 = 1;
 var sealAppear3 = 1;
-/*var myBackground;
-var backgroundNum = 1;
-var bgDraw1 = new background (0,0);
-var bgDraw2 = new background2 (0,0);
-var bgDraw3 = new background3 (0,0);*/
+
+
+var sealScore1 = 0;
+var sealScore2 = 0;
+var sealScore3 = 0;
+var count = 0;
 var notif=setInterval(function(){
       $('blink').each(function() {
         $(this).toggle();
       });
     }, 350);
-
 
 
 
@@ -49,7 +49,23 @@ var backgroundImages = new function () {
   this.myCanvas.src = "sky.jpg";
 
 }
-
+function backgroundClear(){
+  ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
+}
+function drawScore() {
+  var sealScore = sealScore1 + sealScore2 + sealScore3;
+  ctx.font = "30px Tajawal";
+  ctx.fillStyle = "black";
+  ctx.fillText("Score: " + sealScore, 10, 35);
+  if(count == 1) {
+    backgroundClear();
+    alert("YOU WIN!");
+    document.location.reload();
+  }
+  if (sealScore == 3){
+    count = 1;
+  }
+}
 //moving the objects and animals in the game
 function Bear(x, y){
   this.x = x;
@@ -62,10 +78,11 @@ function Bear(x, y){
     this.hideSeal();
     this.hideSeal2();
     this.hideSeal3();
+    drawScore();
+
   }
     this.moveBearRight = function() {
       this.x = this.x + speedBear;
-
     }
     this.moveBearLeft = function(){
       this.x = this.x - speedBear;
@@ -97,16 +114,8 @@ function Bear(x, y){
            sealDraw3.eat();
                 }
               }
+
       }
-
-
-
-
-
-
-function backgroundClear(){
-  ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
-}
 
 
 function keyCheck(e){
@@ -209,11 +218,8 @@ function Seal1(x, y){
   this.x = x;
   this.y = y;
   this.eat = function(){
-<<<<<<< HEAD
-    sealAppear = 0;
-=======
-  sealAppear1=0; 
->>>>>>> 6062e0038bd072bdfc6db3a6314a655786fdf11e
+  sealAppear = 0;
+  sealScore1 = 1;
   }
   this.image = new Image ();
   this.image.src = "SealEyebrows.png";
@@ -238,6 +244,7 @@ function Seal2(x, y){
   this.y = y;
   this.eat = function(){
     sealAppear2 = 0;
+    sealScore2 = 1;
   }
   this.image = new Image ();
   this.image.src = "SealEyebrows.png";
@@ -252,7 +259,7 @@ function sealShowUp2(){
   if (sealAppear2 ==1){
     number1 = "seal2";
     sealDraw2.drawSeal2(number1);
-    sealAppear3 =1;
+    sealAppear2 =1;
   }
 }
 
@@ -262,6 +269,7 @@ function Seal3(x, y){
   this.y = y;
   this.eat = function(){
     sealAppear3 = 0;
+    sealScore3 = 1;
   }
   this.image = new Image ();
   this.image.src = "SealEyebrows.png";
@@ -270,6 +278,7 @@ function Seal3(x, y){
     ctx.drawImage(img, this.x, this.y, 93.7,65);
   }
 }
+
 
 function sealShowUp3(){
   var number1;
@@ -355,6 +364,7 @@ function startgame(){
     startgame = true;
     drawDial();
     winning = true;
+
 
     }
 function drawDial(){
