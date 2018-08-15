@@ -99,7 +99,7 @@ function keyCheck(e){
         document.getElementById("spacecontinue").style.display="none";
       }
       if (bear.y < 500){
-        if(e.keyCode === 68) {
+        if(e.keyCode === 39) {
             bear.moveBearRight();
             backgroundClear();
             sealShowUp();
@@ -107,7 +107,7 @@ function keyCheck(e){
             sealShowUp3();
             bearAnimate();
         }
-        else if(e.keyCode === 65) {
+        else if(e.keyCode === 37) {
             bear.moveBearLeft();
             backgroundClear();
             sealShowUp();
@@ -115,7 +115,7 @@ function keyCheck(e){
             sealShowUp3();
             bearAnimate();
         }
-        else if(e.keyCode === 87){
+        else if(e.keyCode === 38){
               bear.moveBearUp();
               backgroundClear();
               sealShowUp();
@@ -123,7 +123,7 @@ function keyCheck(e){
               sealShowUp3();
               bearAnimate();
             }
-        else if(e.keyCode === 83){
+        else if(e.keyCode === 40){
               bear.moveBearDown();
               backgroundClear();
               sealShowUp();
