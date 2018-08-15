@@ -210,13 +210,13 @@ function sealShowUp3(){
   if (sealAppear3 ==1){
     number1 = "seal3";
     sealDraw3.drawSeal3(number1);
-    sealAppear3 =1;
+    sealAppear3 = 1;
   }
 }
 
-/*function collisionDetection(x, y) {
-
-}*/
+function collisionDetection(x, y) {
+	if ()
+}
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
