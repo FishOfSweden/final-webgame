@@ -12,7 +12,7 @@ var speedBear = 10;
 var speedUp = 10;
 var speedScreen = 6;
 var winning = false;
-var bear = new Bear(30,300);
+var bear = new Bear(100,290);
 var sealDraw1 = new Seal1(90, 450);
 var sealDraw2 = new Seal2(300, 500);
 var sealDraw3 = new Seal3(650, 400);
@@ -50,12 +50,6 @@ var backgroundImages = new function () {
 
 }
 
-
-
-
-
-
-
 //moving the objects and animals in the game
 function Bear(x, y){
   this.x = x;
@@ -65,9 +59,13 @@ function Bear(x, y){
   this.drawBear = function(id){
     var img = document.getElementById(id);
     ctx.drawImage(img, this.x, this.y,194.12,150);
+    this.hideSeal();
+    this.hideSeal2();
+    this.hideSeal3();
   }
     this.moveBearRight = function() {
       this.x = this.x + speedBear;
+
     }
     this.moveBearLeft = function(){
       this.x = this.x - speedBear;
@@ -77,8 +75,34 @@ function Bear(x, y){
    }
    this.moveBearDown = function(){
      this.y = this.y + speedUp;
-   }
 }
+    this.hideSeal = function() {
+      console.log("running hide seal", sealAppear);
+      console.log(this.x, sealDraw1.x, this.y, sealDraw1.y);
+      if( 90<=this.x && this.x<=155 && 356.3<=this.y && this.y<=450){
+          sealDraw1.eat();
+             }
+           }
+    this.hideSeal2 = function() {
+      console.log("running hide seal", sealAppear);
+      console.log(this.x, sealDraw2.x, this.y, sealDraw2.y);
+      if( 300<=this.x && this.x<=365 && 406.3<=this.y && this.y<=500){
+          sealDraw2.eat();
+               }
+             }
+     this.hideSeal3 = function() {
+       console.log("running hide seal", sealAppear);
+       console.log(this.x, sealDraw3.x, this.y, sealDraw3.y);
+       if(556.3<=this.x && this.x<=650 && 306.3<=this.y && this.y<=400){
+           sealDraw3.eat();
+                }
+              }
+      }
+
+
+
+
+
 
 function backgroundClear(){
   ctx.clearRect(0, 0, myCanvas.width, myCanvas.height);
@@ -179,75 +203,14 @@ function bearAnimate(){
   }
 }
 
-///going through the backgrounds
-
-
-/*function background(x, y){
-  this.x = x;
-  this.y = y;
-  this.image = new Image ();
-  this.image.src = "bg1.jpg";
-  this.drawbg1 = function(id){
-    var img = document.getElementById(id);
-    ctx.drawImage(img, this.x, this.y,768,576);
-  }
-}
-
-function background1ShowUp(){
-  var number1;
-  if (backgroundNum==1){
-    number1 = "bg1";
-    bgDraw1.drawbg1(number1);
-    backgroundNum=1;
-  }
-}
-
-function background2(x, y){
-  this.x = x;
-  this.y = y;
-  this.image = new Image ();
-  this.image.src = "bg2.jpg";
-  this.drawbg2 = function(id){
-    var img = document.getElementById(id);
-    ctx.drawImage(img, this.x, this.y,768,576);
-  }
-}
-
-function background2ShowUp(){
-  var number1;
-  if (backgroundNum==1){
-    number1 = "bg1";
-    bgDraw2.drawbg2(number1);
-    backgroundNum=1;
-  }
-}
-
-
-function background3(x, y){
-  this.x = x;
-  this.y = y;
-  this.image = new Image ();
-  this.image.src = "bg3.jpg";
-  this.drawbg3 = function(id){
-    var img = document.getElementById(id);
-    ctx.drawImage(img, this.x, this.y,768,576);
-  }
-}
-
-function background1ShowUp(){
-  var number1;
-  if (backgroundNum==1){
-    number1 = "bg1";
-    bgDraw3.drawbg3(number1);
-    backgroundNum=1;
-  }
-}*/
-
 
 
 function Seal1(x, y){
   this.x = x;
   this.y = y;
+  this.eat = function(){
+    sealAppear = 0;
+  }
   this.image = new Image ();
   this.image.src = "SealEyebrows.png";
   this.drawSeal1 = function(id){
@@ -269,6 +232,9 @@ function sealShowUp(){
 function Seal2(x, y){
   this.x = x;
   this.y = y;
+  this.eat = function(){
+    sealAppear2 = 0;
+  }
   this.image = new Image ();
   this.image.src = "SealEyebrows.png";
   this.drawSeal2 = function(id){
@@ -290,6 +256,9 @@ function sealShowUp2(){
 function Seal3(x, y){
   this.x = x;
   this.y = y;
+  this.eat = function(){
+    sealAppear3 = 0;
+  }
   this.image = new Image ();
   this.image.src = "SealEyebrows.png";
   this.drawSeal3 = function(id){
@@ -310,6 +279,11 @@ function sealShowUp3(){
 /*function collisionDetection(x, y) {
 
 }*/
+
+
+
+
+
 
 document.addEventListener("keydown", keyDownHandler, false);
 document.addEventListener("keyup", keyUpHandler, false);
@@ -377,6 +351,7 @@ function startgame(){
     startgame = true;
     drawDial();
     winning = true;
+
     }
 function drawDial(){
 

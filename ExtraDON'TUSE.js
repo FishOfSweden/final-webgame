@@ -170,3 +170,84 @@ function movementBear(){
       iceB = new Icebergg(400,300);
       iceB.drawBerg();
     }*/
+
+    //this.hideSeal = function() {
+      //console.log("running hide seal");
+      //console.log(this.x, sealDraw1.x, this.y, sealDraw1.y);
+      //if(90<=sealDraw1.x<=155 && 90<=this.x<=155 && 450<=sealDraw1.y<=543.7 && 450<=this.y<=543.7){
+              //document.getElementById("seal1").style.display="none";
+            //}
+         // }
+
+
+
+
+
+   // }
+
+
+
+
+   ///going through the backgrounds
+
+
+   /*function background(x, y){
+     this.x = x;
+     this.y = y;
+     this.image = new Image ();
+     this.image.src = "bg1.jpg";
+     this.drawbg1 = function(id){
+       var img = document.getElementById(id);
+       ctx.drawImage(img, this.x, this.y,768,576);
+     }
+   }
+
+   function background1ShowUp(){
+     var number1;
+     if (backgroundNum==1){
+       number1 = "bg1";
+       bgDraw1.drawbg1(number1);
+       backgroundNum=1;
+     }
+   }
+
+   function background2(x, y){
+     this.x = x;
+     this.y = y;
+     this.image = new Image ();
+     this.image.src = "bg2.jpg";
+     this.drawbg2 = function(id){
+       var img = document.getElementById(id);
+       ctx.drawImage(img, this.x, this.y,768,576);
+     }
+   }
+
+   function background2ShowUp(){
+     var number1;
+     if (backgroundNum==1){
+       number1 = "bg1";
+       bgDraw2.drawbg2(number1);
+       backgroundNum=1;
+     }
+   }
+
+
+   function background3(x, y){
+     this.x = x;
+     this.y = y;
+     this.image = new Image ();
+     this.image.src = "bg3.jpg";
+     this.drawbg3 = function(id){
+       var img = document.getElementById(id);
+       ctx.drawImage(img, this.x, this.y,768,576);
+     }
+   }
+
+   function background1ShowUp(){
+     var number1;
+     if (backgroundNum==1){
+       number1 = "bg1";
+       bgDraw3.drawbg3(number1);
+       backgroundNum=1;
+     }
+   }*/
