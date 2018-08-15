@@ -209,7 +209,11 @@ function Seal1(x, y){
   this.x = x;
   this.y = y;
   this.eat = function(){
+<<<<<<< HEAD
     sealAppear = 0;
+=======
+  sealAppear1=0; 
+>>>>>>> 6062e0038bd072bdfc6db3a6314a655786fdf11e
   }
   this.image = new Image ();
   this.image.src = "SealEyebrows.png";
