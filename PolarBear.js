@@ -289,9 +289,6 @@ function sealShowUp3(){
   }
 }
 
-function collisionDetection(x, y) {
-	if ()
-}
 
 
 
