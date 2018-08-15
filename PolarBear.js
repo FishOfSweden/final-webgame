@@ -248,6 +248,9 @@ function background1ShowUp(){
 function Seal1(x, y){
   this.x = x;
   this.y = y;
+  this.eat = function(){
+  sealAppear1=0; 
+  }
   this.image = new Image ();
   this.image.src = "SealEyebrows.png";
   this.drawSeal1 = function(id){
